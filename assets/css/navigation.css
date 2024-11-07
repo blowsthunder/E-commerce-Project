@@ -1,0 +1,672 @@
+/* --------------Navigation part-------------------------- */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 0 50px;
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    position: absolute;
+    transition: background-color 0.3s; /* Add a smooth transition for background color change */
+
+}
+
+.navbar .navbar_logo img{
+    max-width: 120px;
+    filter: invert(100%);
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul li{
+    margin: 0 10px;
+    list-style: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar .navbar_icons i{
+    color: white;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+.navbar label{
+    display: none;
+}
+
+/* NAvbar scroll */
+.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white; /* Change to the desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for the scrolled navbar */
+}
+
+.scrolled ul li a {
+    color: black;
+    font-weight: bold;
+}
+
+.scrolled .navbar_logo img{
+    filter: none;
+}
+
+.scrolled .navbar_icons i{
+    color: black;
+}
+
+/* Main */
+
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Main seection */
+/* image */
+.main img{
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: cover;
+    /* filter: blur(2px); */
+    opacity: 1;
+    transition: transform 0.7s ease-in, opacity 0.3s ease-in-out;
+}
+
+.main img:hover{
+    cursor: pointer;
+}
+
+.main .catcher{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main .catcher h1{
+    font-family:'Bricolage Grotesque' ;
+    font-size: 70px;
+    font-weight: bold;
+    color: white;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.main .catcher h4{
+    font-size: 20px;
+    color: white;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+
+
+.main #Timer{
+    display: block;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+/* Style your dropdown menu */
+#dropdown-menu {
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    border-radius: 3px;
+    height: auto;
+    transition: height 0.3s;
+}
+
+#dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+    height: 50px;
+}
+
+#dropdown-menu a i{
+    color: black;
+}
+
+#dropdown-menu a p{
+    color: black;
+}
+
+
+
+#dropdown-icon:hover{
+    cursor: pointer;
+}
+
+#dropdown-menu.hidden{
+    visibility: hidden;
+    height: 0px;
+}
+
+
+#dropdown-menu .line{
+    background-color: black;
+    width: 90%;
+    height: 1px;
+}
+
+#dropdown-icon{
+    transform: rotate(-180deg);
+    transition: .1s ease-in-out;
+}
+
+#dropdown-icon.rotate{
+    transform: rotate(0deg);
+}
+
+
+
+
+/* Pannier panel */
+.card_pannel_screen_blur {
+    position: fixed;
+    top: 0;
+    right: 0; /* Position in the right corner */
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: flex-end; /* Align to the bottom */
+    justify-content: flex-end; /* Align to the right */
+    z-index: 11;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.1s, transform 0.3s ease-in-out; /* Add transform transition */
+    transform: translate(1000px,0); /* Start position */
+}
+
+.card_pannel_screen_blur.active {
+    visibility: visible;
+    opacity: 1;
+    transform:  translate(0,0);
+}
+
+.card_pannel {
+    background-color: white;
+    border-radius: 3px;
+    top: 0;
+    right: 0; /* Position in the right corner */
+    bottom: 0;
+    padding: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vh; /* Adjusted for content */
+    max-width: 70%; /* Adjusted for content */
+    z-index: 12;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.card_pannel h1 {
+    margin: 0;
+}
+
+.card_pannel .line {
+    background-color: black;
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+}
+
+.card_pannel form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    scroll-behavior: smooth;
+    scroll-margin-top: 150px;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+    margin-bottom: 100px;
+}
+
+.card_pannel form .product {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card_pannel form .product .left img {
+    max-width: 150px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.card_pannel form .product .right {
+    width: 60%;
+    height: 150px;
+    margin-left: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card_pannel form .product h1,
+.card_pannel form .product h5 {
+    margin: 5px 0;
+}
+
+.card_pannel form .product h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card_pannel form .product span{
+    font-weight: bold;
+}
+
+.card_pannel form .product{
+    font-weight: bold;
+}
+
+.card_pannel form .product .prix {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_pannel .product input[type="number"] {
+    width: 40px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card_pannel .product h5 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Style for the "Prix Total" section */
+.card_pannel .prix_total {
+    position: absolute; /* Position it absolutely within the card panel */
+    bottom: 0px; /* Adjust the distance from the bottom */
+    left: 0px; /* Adjust the distance from the left */
+    width: 95%;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Align elements to the left */
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 10px; /* Adjust padding */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card_pannel .prix_total .prix_display{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px;
+}
+
+.card_pannel .prix_total p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Style for the "Terminaison de livraison" button */
+.card_pannel form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card_pannel input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the "Terminaison de livraison" button */
+.card_pannel form input[type="submit"] {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.card_pannel form input[type="submit"]:hover {
+    background-color: #16a085;
+    transform: scale(1.05);
+}
+
+/* Additional styling for the "Prix Total" section */
+.card_pannel .prix_total {
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+}
+
+.card_pannel .prix_total p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Additional styling for the product details */
+.card_pannel form .product h1 {
+    font-size: 24px;
+}
+
+.card_pannel form .product h5 {
+    margin-bottom: 10px;
+}
+
+/* Add a border to separate products */
+.card_pannel form .product {
+    border-bottom: 1px solid #eee;
+}
+
+/* Styling for quantity buttons */
+.card_pannel .product .quantity-button {
+    background-color: #ddd;
+    color: #333;
+}
+
+.card_pannel .product .quantity-button:hover {
+    background-color: #ccc;
+}
+
+#check{
+    display:none;
+}
+
+#menu_phone{
+    display: none;
+}
+
+
+
+@media only screen and (max-width:950px){
+    *{
+        padding:0;
+        margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    }
+        /* NAVIHATION BAR */
+        section{
+            max-width: 100%;
+        }
+        .navbar{
+            width: 100%;
+            padding: 0 5px;
+            right: 0;
+            left: 0;
+        }
+
+        .navbar .navbar_logo img{
+            max-width: 90px;
+        }
+
+        .navbar_icons label{
+            display:inline-flex;
+        }
+
+
+        #menu{
+            display: none;
+        }
+
+        #menu_phone{
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 80%; /* Adjust the width as needed */
+            background-color: white;
+            z-index: 13; /* Ensure it's on top of other content */
+            overflow-y: none; /* Enable scrolling for long menus */
+            padding: 20px; /* Add some padding for better readability */
+            transform: translate(-1000px,0);
+            transition: all 0.35s ease-in-out;
+        }
+    
+    
+        /* Style for individual menu items */
+        #menu_phone li {
+            margin-bottom: 10px; /* Add spacing between items */
+        }
+    
+        #menu_phone li a {
+            color: black;
+            text-decoration: none; /* Remove underlines from links */
+            font-size: 18px; /* Adjust the font size */
+        }
+
+        #check:checked + .leftPopUp #menu_phone {
+            transform: translate(0,0);
+        }
+
+        /* Add a blurred overlay when the menu is open */
+        #blur-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(5px); /* Add a blur effect to the background */
+            z-index: 12; /* Place it above other content */
+            transition: opacity 0.3s; /* Add a smooth transition effect */
+        }
+
+        /* #check:checked  #nav_bar #menu {
+            transform: translate(0, 0);
+        } */
+
+        #check:checked ~ #blur-overlay {
+            display: block;
+        }
+        
+        /* end of navigation bar */
+}
+
+.itemCheck{
+    width: auto;
+    height: auto;
+}
+
+
+
+.product_Information {
+    position: relative;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.product_Information i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color:red;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.image_product {
+    flex: 0 0 100px;
+    margin-right: 10px;
+}
+
+.image_product img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.product_Information {
+    border-bottom: 1px solid gray;
+    padding: 40px 0;
+}
+
+/* Remove the bottom border from the last .product_Information element */
+.product_Information:last-child {
+    border-bottom: none;
+}
+
+
+.product_Information p {
+    flex: 1;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.product_Information h5 {
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.quantity {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    transform: scale(1.1);
+    bottom: 10%;
+    right: 0;
+}
+.quantity input{
+    width: 25px;
+    height: 25px;
+    margin: 0 2px;
+}
+
+.quantity-button {
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transform: scale(1.1);
+}
+
+/* Styles for the container holding the confirmation message */
+.confirmDelete{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Adjust the z-index as needed */
+}
+
+
+.confirmDelete.active{
+    display: flex;
+}
+
+/* Styles for the blurred background */
+.confirmDelete .blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    backdrop-filter: blur(8px); /* Adjust the blur amount */
+}
+
+/* Styles for the message box */
+.confirmDelete .messageConfirm{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1; /* Place above the blurred background */
+    max-width: 300px; /* Adjust the width as needed */
+}
+
+/* Styles for the buttons */
+.confirmDelete .messageConfirm .buttons {
+    margin-top: 15px;
+}
+
+.confirmDelete .messageConfirm .buttons input[type="button"] {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Styles for the 'Yes' button */
+.confirmDelete .messageConfirm .buttons input[type="button"]:first-of-type {
+    background-color: #ff4d4d; /* Red background color, adjust as needed */
+    color: white;
+}
+
+/* Styles for the 'No' button */
+.confirmDelete .messageConfirm .buttons input[type="button"]:last-of-type {
+    background-color: #4CAF50; /* Green background color, adjust as needed */
+    color: white;
+}

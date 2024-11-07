@@ -1,0 +1,318 @@
+/* ------------------------------------------------------ */
+/* Product Page  */
+/* ------------------------------------------------------ */
+
+/* Styling for the main content area */
+#main-content {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+#main-content__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for page title and stats */
+#main-content__container .products_stats {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#main-content__container .products_stats a {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Styling for the filter section */
+#main-content__container .Filter {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#main-content__container input[type="text"],
+#main-content__container select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+}
+
+/* Styling for the "Add Product" button */
+#main-content__container .btn_add-products button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Styling for the user list section */
+#main-content__container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#main-content__container table th,
+#main-content__container table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#main-content__container table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+#main-content__container table img {
+    max-width: 60px;
+    height: auto;
+}
+
+/* Styling for font-awesome icons */
+#main-content__container .fa-solid {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------ */
+/* Add Product Page  */
+/* ------------------------------------------------------ */
+
+/* Styling for the product page content */
+#main-content__container .title_and_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#main-content__container .title_and_btn button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#main-content__container .product_title h3,
+#main-content__container .product_description h3,
+#main-content__container .product_images h3,
+#main-content__container .product_pricing h3,
+#main-content__container .product_Add-to-Stock h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#main-content__container input[type="text"],
+#main-content__container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+#main-content__container .product_images .viewImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main-content__container .product_images img{
+    width: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin: 10px;
+}
+
+#main-content__container .product_images input {
+    margin-bottom: 10px;
+}
+
+#main-content__container .product_description textarea,
+#main-content__container .product_images textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+
+
+/* erreur */
+#erreur{
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    border: 1px solid black;
+}
+
+.success {
+    background-color: #27AE60; /* Green color */
+    color: white;
+    height:100%;
+    width: 100%;
+    padding: 5px;
+}
+
+/* ------------------Dispaly info---------------- */
+
+
+
+#responseDiv .displayInfo {
+    display: none;
+    opacity: 0;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Place it above the main content */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    text-align: center; /* Center the contents inside .displayInfo */
+    max-width: 80%; /* Optional, limit the width to 80% of the viewport */
+}
+
+#responseDiv .displayInfoActive{
+    display: block;
+    opacity: 0.99;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Place it above the main content */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    text-align: center; /* Center the contents inside .displayInfo */
+    max-width: 80%; /* Optional, limit the width to 80% of the viewport */
+}
+
+
+#responseDiv .displayInfoActive .UP{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Optional styles for better appearance */
+#responseDiv .displayInfoActive .images {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#responseDiv .displayInfoActive .images img {
+    max-width: 250px;
+}
+
+#responseDiv .displayInfoActive .images .small_image img {
+    max-width: 60px !important;
+}
+
+#responseDiv .displayInfoActive .information{
+    width: 100%;
+    text-align: left;
+}
+
+#responseDiv  .displayInfoActive h1 {
+    font-size: 32px;
+}
+
+#responseDiv .displayInfoActive h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+#responseDiv .displayInfoActive h3 {
+    font-size: 20px;
+}
+
+.displayInfoActive p {
+    font-size: 16px;
+}
+
+/* ------------------Confirm delete page---------------- */
+
+.blur{
+    display: none;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for the blur effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.blurActive{
+    display: flex;
+    opacity: 0.99;
+    z-index: 1;
+}
+
+
+
+.DeleteConfirmation {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: fixed; /* Use fixed positioning for overlay */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust centering with transform */
+    z-index: 2; /* Adjust the z-index value to be above the .blur element */
+}
+
+
+.DeleteConfirmation h1 {
+    margin-top: 0;
+}
+
+.DeleteConfirmation button,
+.DeleteConfirmation a {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.DeleteConfirmation button:hover,
+.DeleteConfirmation a:hover {
+    background-color: #555;
+}

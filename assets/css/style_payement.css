@@ -1,0 +1,385 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    overflow:auto;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.container {
+    margin: 50px auto;
+}
+
+.user_information{
+    flex-basis: calc(50% - 10px);
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.user_information a {
+    text-decoration: none;
+    color: #333;
+}
+
+.user_information img {
+    max-width: 100px;
+}
+
+.user_information p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.user_information p span {
+    font-weight: bold;
+}
+
+#Register{
+    display: none;
+}
+
+
+.user_information h4 {
+    font-size: 24px;
+}
+
+.user_information h6 {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.user_information #erreur {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.user_information .fullname,
+.user_information .city-select,
+.user_information .input {
+    margin-bottom: 5px;
+}
+
+.user_information .fullname h3,
+.user_information .city-select h3,
+.user_information .input h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.user_information .fullname input,
+.user_information .input input,
+.user_information .city-select select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.user_information .fullname input[readonly] {
+    background-color: #eee;
+}
+
+.user_information .city-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="%23333"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 30px;
+}
+
+
+.commande{
+    flex-basis: calc(50% - 10px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.itemCheck{
+    width: auto;
+    height: 90%;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+/* Hide default scrollbar */
+.itemCheck::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.itemCheck::-webkit-scrollbar
+{
+    margin: 10px;
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+.itemCheck::-webkit-scrollbar-thumb
+{
+    opacity: 0.5;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(136, 136, 136,0.5)
+}
+
+.itemCheck::-webkit-scrollbar-thumb:hover
+{
+    background-color: rgb(136, 136, 136,1)
+}
+  
+
+
+.product_Information {
+    position: relative;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.product_Information i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color:red;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.image_product {
+    flex: 0 0 100px;
+    margin-right: 10px;
+}
+
+.image_product img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.product_Information {
+    border-bottom: 1px solid gray;
+    padding: 40px 0;
+}
+
+/* Remove the bottom border from the last .product_Information element */
+.product_Information:last-child {
+    border-bottom: none;
+}
+
+
+.product_Information p {
+    flex: 1;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.product_Information h5 {
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.quantity {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    transform: scale(1.1);
+    bottom: 10%;
+    right: 0;
+}
+.quantity input{
+    width: 25px;
+    height: 25px;
+    margin: 0 2px;
+}
+
+.quantity-button {
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transform: scale(1.1);
+}
+
+.line {
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+#total_price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styles for the container holding the confirmation message */
+.confirmDelete,.RegisterInfo{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Adjust the z-index as needed */
+}
+
+
+.confirmDelete.active,.RegisterInfo.active{
+    display: flex;
+}
+
+/* Styles for the blurred background */
+.confirmDelete .blur,.RegisterInfo .blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    backdrop-filter: blur(8px); /* Adjust the blur amount */
+}
+
+/* Styles for the message box */
+.confirmDelete .message,.RegisterInfo .message {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1; /* Place above the blurred background */
+    max-width: 300px; /* Adjust the width as needed */
+}
+
+/* Styles for the buttons */
+.confirmDelete .message .buttons {
+    margin-top: 15px;
+}
+
+.confirmDelete .message .buttons input[type="button"] {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Styles for the 'Yes' button */
+.confirmDelete .message .buttons input[type="button"]:first-of-type {
+    background-color: #ff4d4d; /* Red background color, adjust as needed */
+    color: white;
+}
+
+/* Styles for the 'No' button */
+.confirmDelete .message .buttons input[type="button"]:last-of-type {
+    background-color: #4CAF50; /* Green background color, adjust as needed */
+    color: white;
+}
+
+.input[id^="Register"] {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.input.Active[id^="Register"] {
+    max-height: 100px; /* Adjust the height as needed */
+    opacity: 1;
+    overflow: visible;
+}
+
+
+.user_information input[type="submit"] {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    background-color: rgba(0, 150, 255, 0.8); /* Adjusted blue tone */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.user_information input[type="submit"]:hover {
+    background-color: rgba(0, 120, 255, 0.8); /* Lighter shade of blue on hover */
+    transform: scale(1.01);
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check p{
+    color: #333;
+    opacity: 0.5;
+    text-decoration: underline;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.check p:hover{
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width:900px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        flex-direction: column-reverse;
+        overflow: scroll;
+        height: auto;
+    }
+}

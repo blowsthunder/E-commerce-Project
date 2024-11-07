@@ -1,0 +1,41 @@
+<script>
+                    // Function to update cart item quantity
+                    function updateCartItem(id, action) {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', './Components/cardAPI.php', true);
+                        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState === 4) {
+                                if (xhr.status === 200) {
+                                    try {
+                                        var response = JSON.parse(xhr.responseText);
+                                        if (response.quantity !== undefined) {
+                                            // Check if the element with the specified ID exists
+                                            var inputElement = document.getElementById('quantity-' + id);
+                                            if (inputElement !== null) {
+                                                // Update the quantity in the DOM
+                                                var newQuantity = parseInt(response.quantity);
+                                                inputElement.value = newQuantity;
+                                            }else{
+                                                console.log(xhr)
+                                                alert('Error ' + response.error)
+                                            }
+                                        } else {
+                                            alert('Error updating quantity: ' + response.error);
+                                        }
+                                    } catch (error) {
+                                        alert('Error parsing JSON: ' + error);
+                                    }
+                                } else {
+                                    alert('Error updating quantity.');
+                                }
+                            }
+                        };
+
+                        var data = 'id=' + id + '&action=' + action + '&cart=' + '<?= $cart ?>';
+                        xhr.send(data);
+                    }
+
+
+                </script>

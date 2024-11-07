@@ -1,0 +1,536 @@
+/* ***************************************************************************************** */
+/* New Page : Fiche produit */
+/* ***************************************************************************************** */
+.product-details {
+    display: flex;
+    margin: auto;
+    max-width: 1500px;
+    background-color: #fff;
+    padding-top: 100px;
+    padding-right: 40px;
+}
+
+.product-info {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20 px;
+}
+
+.product-info h1 {
+    margin: 0 0 10px;
+}
+
+.product-info p {
+    margin: 0 0 10px;
+}
+
+.product-info label {
+    margin-right: 10px;
+}
+
+.product-info select {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.product-info button {
+    padding: 10px 20px;
+    background-color: #EF3340;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-photos {
+    flex: 1;
+    display: flex;
+    align-items:flex-start;
+    padding: 20px;
+}
+
+.big-photo {
+    width: 100%;
+    margin: 0 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.big-photo img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    border-radius: 6px;
+}
+
+.small-photos {
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+}
+
+.small-photo {
+    opacity: 1;
+    margin: 5px 5px;
+    width: 90%;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.small-photo:hover {
+    opacity: 0.6;
+}
+
+
+
+
+.product-info {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-info h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.price {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #888;
+}
+
+.price p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.price span {
+    text-decoration: line-through;
+    margin-right: 5px;
+    color: #aaa;
+}
+
+.price #span2{
+    color:green;
+    text-decoration:none;
+    font-size:30px
+}
+
+.priceAndstyle {
+    display: flex;
+    flex-direction: column;
+    margin : 25px 0;
+}
+
+.priceAndstyle h3 {
+    margin: 0;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.choice {
+    display: flex;
+    gap: 10px;
+}
+
+.choice label {
+    padding: 15px 30px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+    margin: 0px;
+}
+
+.choice label:hover {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+
+
+.catcher {
+    display: flex;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.catcher i {
+    margin-right: 10px;
+    font-size: 15PX;
+}
+
+.choice input[type="radio"]:checked + label {
+    /* Style when the radio button is selected */
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hidden-radio {
+    display: none; /* Hide the radio input */
+}
+
+
+.Dropdown {
+    margin-top: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 20px 20px;
+}
+
+
+.Dropdown .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.Dropdown h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.Dropdown i {
+    font-size: 20px;
+    color: #007bff;
+    transform: rotate(0);
+}
+
+.Dropdown p, .Dropdown ul {
+    margin: 0;
+    padding: 5px 0;
+    color: #555;
+}
+
+.Dropdown ul {
+    padding-left: 20px;
+}
+
+/* Add transitions for smooth animation */
+.information_desc,
+.information_qual,
+.information {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.title .fa-caret-down {
+    transition: transform 0.3s;
+}
+
+.title.actives .fa-caret-down {
+    transform: rotate(180deg);
+}
+
+
+
+#button {
+    background-color: #1f6d2c !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    height: 60px;
+}
+
+button:hover {
+    background-color: #00b309;
+}
+
+
+/* Add this CSS to your existing styles or in a separate CSS file */
+.clicked {
+    transform: scale(0.95); /* Apply a scale transformation */
+    transition: transform 0.2s ease-in-out; /* Add a smooth transition */
+}
+
+
+
+
+    /* slides photo for mobile */
+    .slides{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .slide{
+        position: absolute;
+        width: 100%;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .slide label{
+        margin-left: 10px;
+    }
+
+    .slide input{
+        display: block;
+
+    }
+
+    .slide label{
+        border: 2px solid gray;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .bar{
+        margin-left: 10px;
+    }
+
+
+    .slide input:checked +.bar {
+        background-color: gray;
+    }
+
+    
+    /* slides photo end */
+
+/* --------------------Top Vente section---------------- */
+.top_vente_section {
+    min-height: 100vh;
+    width: auto;
+}
+
+.top_vente_header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top_vente {
+    /* Ensure a horizontal scrolling container */
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevent items from wrapping to new lines */
+}
+
+.top_vente::-webkit-scrollbar{
+    display: none;
+}
+
+.top_vente .top_vente_item {
+    display: inline-block; /* Display items in a row */
+    width: calc(20% - 20px); /* Adjust the width as needed */
+    height: auto;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+
+
+.top_vente .top_vente_item:hover{
+    transform: scale(1.03);
+}
+
+.top_vente .top_vente_item .image_border{
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+
+.top_vente .top_vente_item .image_border img {
+    width: auto;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    background-color: var(--SecondaryColor);
+    border-radius: 6px;
+}
+
+/* Hide the hover image by default */
+.top_vente_item .image_border .hover-image {
+    display: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    opacity: 0;
+    transition: 0.2s ease-in-out; 
+}
+
+/* Show the hover image on hover */
+.top_vente_item:hover .image_border .hover-image {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.top_vente .top_vente_item .addquick{
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    z-index: 1;
+    width: 100%; 
+    height: 50px;
+    text-align: center; 
+    color: white; 
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.top_vente .top_vente_item:hover .addquick{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.top_vente .top_vente_item .addquick h4{
+    color: white;
+}
+
+
+.top_vente .top_vente_item .top_vente_info{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.top_vente .top_vente_item .top_vente_info h4,
+.top_vente .top_vente_item .top_vente_info h6{
+    font-weight: lighter;
+    font-size: 23px;
+}
+
+.top_vente .top_vente_item .top_vente_info h6{
+    font-size: 15px;
+}
+
+
+/* Media Query for mobile screens */
+@media (max-width: 768px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .product-details {
+        flex-direction: column;
+        width: auto;
+        max-width: none;
+        padding-right: 0;
+    }
+
+    .product-photos {
+        width: auto;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        padding: 0;
+    }
+
+    .small-photos {
+        display: block;
+        white-space: nowrap;
+        overflow-x: auto;
+        max-width: none;
+        width: 100%;
+    }
+
+    .small-photo {
+        max-height: 80vh;
+        width: 50vh;
+    }
+
+    .big-photo {
+        display: none;
+    }
+
+    .product-info {
+        padding: 20px 10px;
+    }
+
+    .product-info h1 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .price p{
+        text-align: center;
+    }
+
+    .price span{
+        font-size: 20px;
+    }
+
+    .price #span2{
+        font-size: 25px;
+    }
+
+    .priceAndstyle h3 {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .choice{
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 3px;
+    }
+
+    .choice label{
+        padding: 16px 16px;
+        margin: 0;
+    }
+
+    /* Top Vente Section */
+
+    .top_vente .top_vente_item {
+        width: 60%;    
+        }
+
+    .top_vente .top_vente_item .image_border{
+        text-align: center;
+        width: auto;
+        overflow: hidden;
+    }
+
+}
+
+
+/* PC portable and tablette */
+@media only screen and (min-width: 900px) and (max-width: 1400px) {
+    .top_vente .top_vente_item{
+        width: calc(25% - 20px);
+    }
+}

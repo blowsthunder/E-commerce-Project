@@ -1,0 +1,322 @@
+
+/* ---------------------------------Content of the product not the anv----------------------- */
+/* section */
+
+
+/*Pagination*/
+#pagination{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pagination a{
+    padding: 15px;
+    border: 1px Solid black;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+#pagination a.active{
+    background-color: rgba(57, 232, 255, 0.541);
+}
+
+
+section {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    max-width: 100%;
+  }
+  
+  .main_produit {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  .main_parag {
+    flex: 1;
+    padding: 20px;
+    max-width: 41%;
+  }
+  
+  .main_parag h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .main_parag p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  
+  .main_image img {
+    width: 500px;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+
+/* Produit */
+
+.produit {
+    display: flex;
+    margin-top: 20px; /* Add some spacing from the top */
+    margin-left: auto; /* Align to the right */
+    margin-right: auto; /* Align to the left */
+    max-width: 1200px; /* Limit the maximum width */
+}
+
+/* ---right panel--- */
+.produit .right_pannel {
+    position: sticky;
+    margin-top: 90px;
+    width: 20%;
+    min-width: 200px; /* Set a minimum width */
+    height: 70vh;
+    background-color: rgb(233, 233, 233);
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px 40px;
+  }
+  
+.produit .right_pannel .dispo {
+    margin-bottom: 20px;
+}
+
+.produit .right_pannel .dispo .filters {
+    height: 0;
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.produit .right_pannel .dispo .filters input{
+    height: 40px;
+    width: 150px;
+    background-color: green;
+    color: white;
+    border: none;
+    margin: 7px 0;
+    border-radius: 3px;
+    opacity: 0;
+}
+
+
+.produit .right_pannel .dispo.show .filters {
+    height: auto;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+}
+
+.produit .right_pannel .dispo.show .filters input {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.produit .right_pannel .dispo.show .filters input:hover {
+    background-color: rgb(0, 184, 0);
+}
+
+.produit .right_pannel .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.produit .right_pannel .title h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.produit .right_pannel .title i {
+    transform: rotate(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.produit .right_pannel .dispo.show .title i {
+    transform: rotate(180deg);
+}
+
+/* ---left panel--- */
+.produit .left_pannel {
+    width: 80%;
+    padding-left: 20px; /* Add some padding */
+}
+
+
+.top_vente_header{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top_vente {
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.top_vente .top_vente_item {
+    /* background-color: blue; */
+    width: calc(33% - 20px);
+    height: auto;
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.top_vente .top_vente_item:hover{
+    transform: scale(1.03);
+}
+
+.top_vente .top_vente_item .image_border{
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+
+.top_vente .top_vente_item .image_border img {
+    width: auto;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    background-color: var(--SecondaryColor);
+    border-radius: 6px;
+}
+
+/* Hide the hover image by default */
+.top_vente_item .image_border .hover-image {
+    display: absolute;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    opacity: 0;
+    transition: 0.2s ease-in-out; 
+}
+
+/* Show the hover image on hover */
+.top_vente_item:hover .image_border .hover-image {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.top_vente .top_vente_item .addquick{
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    z-index: 1;
+    width: 100%; 
+    height: 50px;
+    text-align: center; 
+    color: white; 
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.top_vente .top_vente_item:hover .addquick{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.top_vente .top_vente_item .addquick h4{
+    color: white;
+}
+
+
+.top_vente .top_vente_item .top_vente_info{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.top_vente .top_vente_item .top_vente_info h4,
+.top_vente .top_vente_item .top_vente_info h6{
+    font-weight: lighter;
+    font-size: 23px;
+}
+
+.top_vente .top_vente_item .top_vente_info h6{
+    font-size: 15px;
+}
+
+@media only screen and (max-width:950px){
+    .main_produit{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main_produit .main_parag{
+        max-width: 80%;
+        flex: none;
+    }
+
+    .main_parag h1{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .main_parag p{
+        font-size: 16px;
+    }
+
+    .produit{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .produit .right_pannel{
+        width: 100%;
+        box-sizing: border-box;
+        height: 10vh;
+    }
+
+    .produit .left_pannel{
+        width: 100%;
+    }
+
+    .top_vente{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .top_vente .top_vente_item{
+        width: 90%;
+    }
+    
+}

@@ -1,0 +1,281 @@
+/* ------------------------login Part ---------------------------------*/
+:root{
+    --TextColor:black;
+    --PrimaryColor: #27AE60;
+    --HoverEffect: #2ECC71;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.login_form {
+    display: flex; 
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.login_left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PrimaryColor);
+    padding: 20px;
+}
+
+.login_left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login_right {
+    flex: 1; /* Take remaining vertical space */
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.login_right h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.login_right p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.login_right input[type="text"],
+.login_right input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+
+.stay_connected{
+    font-size: 14px;
+    margin: 15px 0;
+    color: #777;
+}
+
+.stay_connected label{
+    margin-left: 10px;
+}
+
+
+.login_right input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--PrimaryColor);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login_right input[type="submit"]:hover {
+    background-color: var(--HoverEffect);
+}
+
+.or_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.or {
+    margin: 0 10px;
+    padding-top: 15px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .login_form {
+        flex-direction: column;
+    }
+
+    .login_left,
+    .login_right {
+        flex: 1;
+    }
+    .login_left{
+        text-align: center;
+    }
+
+    .login_left img {
+        max-width: 60%;
+        display: inline-block;
+    }
+}
+
+
+/* ------------------------Register_Part---------------------------- */
+
+
+.register {
+    display: flex; 
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.register .left {
+    flex: 1; /* Take remaining vertical space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PrimaryColor);
+    padding: 20px;
+}
+
+.register .left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.register .right {
+    flex: 1; /* Take remaining vertical space */
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.register .right h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.register .right p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.register .fullname {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register input[type="text"],
+.register input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.register input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--PrimaryColor);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register input[type="submit"]:hover {
+    background-color: var(--HoverEffect);
+}
+
+.register .or_section {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.register .line {
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.register .or {
+    margin: 0 15px;
+    color: #aaa;
+}
+
+/* ----------------Reset Passowrd Page------------------ */
+.hidden{
+    display: none;
+}
+#passwordDiv{
+    position: relative;
+}
+
+#passwordDiv i{
+    position: absolute;
+    top: 20%;
+    right: 2%;
+}
+
+
+@media (max-width: 768px) {
+    .register {
+        flex-direction: column;
+    }
+
+    .register .left,
+    .register .right {
+        flex: 1;
+    }
+
+    .register .left {
+        text-align: center;
+    }
+
+    .register .left img {
+        max-width: 60%;
+        display: inline-block;
+    }
+
+    .register .left img a {
+        text-decoration: none;
+    }
+
+    #passwordDiv i{
+        top:25%;
+        font-size: 12px;
+    }
+
+}
+
+
+

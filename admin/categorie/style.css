@@ -1,0 +1,163 @@
+/* Styling for the user list section */
+
+
+/* Styling for the main content area */
+#main-content {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+#main-content__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Styling for the "Add Product" button */
+#main-content__container .btn_add-products button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#main-content__container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#main-content__container table th,
+#main-content__container table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+#main-content__container table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+#main-content__container table img {
+    max-width: 60px;
+    height: auto;
+}
+
+/* Styling for font-awesome icons */
+#main-content__container .fa-solid {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+/* Update category Page */
+#main-content__container .title_and_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#main-content__container .title_and_btn button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Styling for the product page content */
+#main-content__container .title_and_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#main-content__container .title_and_btn button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#main-content__container .product_title h3,
+#main-content__container .product_description h3,
+#main-content__container .product_images h3,
+#main-content__container .product_pricing h3,
+#main-content__container .product_Add-to-Stock h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#main-content__container input[type="text"],
+#main-content__container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#main-content__container .product_images input {
+    margin-bottom: 10px;
+}
+
+#main-content__container .product_images .image .input{
+    width: 100%;
+}
+
+#main-content__container .product_description  textarea,
+#main-content__container .product_images .image .input textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#main-content__container .product_images .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-content__container .product_images .image img{
+    width: 100px;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+
+
+/* erreur */
+#erreur{
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    border: 1px solid black;
+}
+
+.success {
+    background-color: #27AE60; /* Green color */
+    color: white;
+    height:100%;
+    width: 100%;
+    padding: 5px;
+}

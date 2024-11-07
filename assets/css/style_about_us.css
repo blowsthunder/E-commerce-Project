@@ -1,0 +1,133 @@
+
+/* ----------------About us part-------------------- */
+.about_us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    padding-top: 200px;
+  }
+  
+  .Header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .Header h1 {
+    font-size: 52px;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 32px;
+    color: #444;
+    margin-top: 30px;
+    margin: 30px 0;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+  
+  
+  .about_us a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .about_us a:hover {
+    text-decoration: underline;
+  }
+  
+
+/* Test */
+/* ----------------------------------Why us section------------------------------------- */
+
+
+.rapper {
+    margin: 0;
+    text-align: center;
+    padding: 100px 10px;
+    width: 100%;
+    background-color: #e6e6e6;
+    border-radius: 6px;
+}
+
+.rapper h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.reason_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 300px;
+    width: calc(30% - 20px);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.reason_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.reason_item {
+    display: inline-block;
+    margin-right: 20px; /* Add some spacing between reason items */
+    position: relative; /* Add relative positioning to the reason item */
+}
+
+.reason_item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease-in-out;
+    z-index: 1; /* Ensure the image is above the pseudo-element */
+}
+
+.reason_item:hover img {
+    transform: scale(1.05); /* Enlarge the image slightly on hover */
+}
+
+
+.the_reason h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.the_reason p {
+    font-size: 16px;
+    color: #666;
+}
+
+.Horizental_line {
+    width: 1px;
+    height: 100px;
+    background-color: #ccc;
+}
+
+
+  
+  

@@ -1,0 +1,25 @@
+<div id="displayInfoActive" class="displayInfoActive">
+	<i style="color: red;width: 100% ; text-align: right;font-size: 24px;" id="closeIcon" class="fa-solid fa-circle-xmark"></i>
+    <div class="UP">
+        <div class="images">
+            <img src="{{ productInfo.image_principale }}">
+            <div class="small_image">
+                <img src="{{ productInfo.image_hover }}">
+                <img src="{{ productInfo.small_image }}">
+            </div>
+        </div>
+
+        <div class="information">
+            <h1>Product Info</h1>
+                <div class="items">
+                    <h4>Product name : {{ productInfo.name }}</h4>
+                    <h4>Product price : {{ productInfo.sale_Price }}</h4>
+                    <h4>Product stock : {{ productInfo.stock }}</h4>
+                </div>
+        </div>
+
+    </div>
+    <h2>Description :</h2>
+    <p>{{ productInfo.description }}</p>
+</div>
+
